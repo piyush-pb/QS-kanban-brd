@@ -1,9 +1,10 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-:root{
+
+:root {
   --white1: #ffffff;
   --black1: #000000;
 
@@ -12,15 +13,38 @@
   --grey1: #dfe4e9;
   --grey2: #f0f1f4;
   --grey3: #F8F8FA;
-
 }
-.board-details{
+
+.board-details {
   width: 100%;
   height: calc(100vh - 68px);
   background-color: var(--grey2);
   overflow-x: scroll;
 }
-.board-details-list{
+
+.board-details-list {
   width: fit-content;
   display: flex;
+}
+
+/* Media queries for responsiveness */
+
+/* For screens with a maximum width of 768px (tablets) */
+@media only screen and (max-width: 768px) {
+  .board-details {
+    height: calc(100vh - 50px); /* adjust height for smaller screens */
+  }
+  .board-details-list {
+    flex-wrap: wrap; /* wrap list items to the next line */
+  }
+}
+
+/* For screens with a maximum width of 480px (mobile devices) */
+@media only screen and (max-width: 480px) {
+  .board-details {
+    height: calc(100vh - 30px); /* adjust height for smaller screens */
+  }
+  .board-details-list {
+    flex-direction: column; /* stack list items vertically */
+  }
 }
